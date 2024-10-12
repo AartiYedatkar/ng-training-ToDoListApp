@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do List App</title>
+</head>
+<body>
+<div class="container">
+    <h2>To-Do List</h2>
+    <form id="task-form">
+        <input type="text" id="task-name" class="form-control" placeholder="Task Name" required>
+        <input type="date" id="due-date" class="form-control" required>
+        <select id="priority" class="form-control" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <input type="text" id="assigned-to" class="form-control" placeholder="Assigned To" required>
+        <textarea id="comment" class="form-control" placeholder="Comment"></textarea>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </form>
+    <input type="text" id="search" class="form-control" placeholder="Search tasks..." onkeyup="searchTasks()">
+    <table class="table task-table">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Due Date</th>
+                <th>Priority</th>
+                <th>Assigned To</th>
+                <th>Status</th>
+                <th>Comment</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="task-list"></tbody>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
